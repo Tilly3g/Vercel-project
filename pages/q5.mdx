@@ -1,0 +1,46 @@
+---
+type: page
+title: 5
+date: 2021-03-18
+---
+
+# Question 5
+
+## A customer writes in to the Helpdesk asking "How do I do a redirect from /hello-vercel to https://vercel.com?" In a couple of paragraphs, how do you respond?
+
+Hi There,
+
+Thanks for getting in touch with us! You can do this easily by making use of the `next.config.js` file if you're using next.js, or the `vercel.json` file in all other cases. Please take a look at our documentation on this [here](https://vercel.com/support/articles/does-vercel-support-permanent-redirects?query=redire#in-application-redirects), an example of each case is below.
+
+In the `next.config.js` file use:
+```
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/hello-vercel',
+        destination: 'https://vercel.com',
+        permanent: true,
+      },
+    ]
+  },
+}
+```
+
+In the `vercel.json` file use:
+```
+{
+  "redirects": [
+    { 
+      "source": "/hello-vercel",
+      "destination": "https://vercel.com", 
+      "permanent": true
+    }
+  ]
+}
+```
+Please give this a go and let me know how you get on?
+
+Best Regards,
+
+Tilly
