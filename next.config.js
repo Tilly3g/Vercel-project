@@ -7,6 +7,11 @@ module.exports = withNextra(
           source: '/about',
           destination: '/',
           permanent: true
+        },
+        {
+          source: '/hello-vercel',
+          destination: 'https://vercel.com',
+          permanent: false
         }
       ]
     }
